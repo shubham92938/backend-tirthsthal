@@ -1,0 +1,1192 @@
+// ── Temple seed data (26 temples) ─────────────────────────────────────
+// Generated from the frontend's src/data/temple.js + templeImages.js
+// (same images/fallback logic as src/data/store.js). Keep in sync by `slug`.
+// Re-generate after editing the frontend data, or edit here directly.
+// Usage (from backend/):  npm run seed:temples
+
+const temples = [
+  {
+    "name": "Dagdusheth Halwai Ganpati Temple",
+    "slug": "dagdusheth-halwai-ganpati",
+    "deity": "Lord Ganesh",
+    "deityColor": "#10b981",
+    "type": "Swayambhu Temple",
+    "address": "Budhwar Peth, Pune",
+    "district": "Pune",
+    "state": "Maharashtra",
+    "description": "One of the most famous Ganesh temples in Pune, the Dagdusheth Halwai Ganpati is visited by millions of devotees every year including celebrities and politicians.",
+    "history": "The temple was built in the late 19th century by Seth Dagdusheth Halwai, a famous sweet merchant of Pune, in memory of his son who died of plague. The idol is adorned with gold and precious jewels.",
+    "timings": {
+      "morning": "6:00 AM - 12:00 PM",
+      "evening": "4:00 PM - 11:00 PM"
+    },
+    "aartiTimings": {
+      "morningAarti": "6:00 AM",
+      "madhyahnaAarti": "12:00 PM",
+      "eveningAarti": "8:00 PM"
+    },
+    "festivals": [
+      "Ganesh Chaturthi",
+      "Sankashti Chaturthi",
+      "Diwali"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=800",
+      "https://images.unsplash.com/photo-1548013146-72479768bada?w=800"
+    ],
+    "coordinates": {
+      "lat": 18.5158,
+      "lng": 73.8563
+    },
+    "rating": 4.9,
+    "reviews": 18420,
+    "facilities": [
+      "Parking",
+      "VIP Darshan",
+      "Prasad",
+      "Wheelchair Access",
+      "Locker"
+    ],
+    "nearbyTemples": [
+      "Kasba Ganpati Temple",
+      "Tambdi Jogeshwari Temple"
+    ],
+    "officialWebsite": "https://dagdushethganpati.com"
+  },
+  {
+    "name": "Shri Mahakaleshwar Temple",
+    "slug": "mahakaleshwar-temple",
+    "deity": "Lord Shiva",
+    "deityColor": "#3b82f6",
+    "type": "Jyotirlinga",
+    "address": "Jaisinghpura, Ujjain",
+    "district": "Ujjain",
+    "state": "Madhya Pradesh",
+    "description": "One of the 12 Jyotirlingas in India, the Mahakaleshwar Temple is one of the most sacred Hindu temples dedicated to Lord Shiva.",
+    "history": "The temple is believed to be one of the oldest temples in India, with references found in ancient scriptures including the Puranas. The current structure was built by the Maratha general Ranoji Shinde in 1736.",
+    "timings": {
+      "morning": "4:00 AM - 11:00 AM",
+      "evening": "5:00 PM - 10:00 PM"
+    },
+    "aartiTimings": {
+      "bhasmaAarti": "4:00 AM",
+      "naivedyam": "7:30 AM",
+      "mahaPooja": "10:00 AM",
+      "sandhyaAarti": "6:00 PM",
+      "shyanAarti": "10:30 PM"
+    },
+    "festivals": [
+      "Mahashivratri",
+      "Shravan Month",
+      "Navratri"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1548013146-72479768bada?w=800",
+      "https://images.unsplash.com/photo-1577083552431-6e5fd01988ec?w=800",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=800"
+    ],
+    "coordinates": {
+      "lat": 23.1828,
+      "lng": 75.7682
+    },
+    "rating": 4.9,
+    "reviews": 15420,
+    "facilities": [
+      "Parking",
+      "VIP Darshan",
+      "Prasad",
+      "Wheelchair Access",
+      "Locker",
+      "Cloakroom"
+    ],
+    "nearbyTemples": [
+      "Kal Bhairav Temple",
+      "Harsiddhi Temple",
+      "Sandipani Ashram"
+    ],
+    "officialWebsite": "https://mahakaleshwar.nic.in"
+  },
+  {
+    "name": "Kal Bhairav Temple",
+    "slug": "kal-bhairav-temple",
+    "deity": "Kal Bhairav",
+    "deityColor": "#1a1a1a",
+    "type": "Shakti Peeth",
+    "address": "Kal Bhairav Marg, Ujjain",
+    "district": "Ujjain",
+    "state": "Madhya Pradesh",
+    "description": "The Kal Bhairav Temple is an ancient temple dedicated to Kal Bhairav, the deity of Ujjain city and the chief of the Bhairavas.",
+    "history": "The temple dates back to the period of King Bhadrasen. Kal Bhairav is considered the kotwal (police chief) of Ujjain and devotees offer liquor as prasad.",
+    "timings": {
+      "morning": "5:00 AM - 12:00 PM",
+      "evening": "4:00 PM - 10:30 PM"
+    },
+    "aartiTimings": {
+      "morningAarti": "5:30 AM",
+      "eveningAarti": "7:00 PM"
+    },
+    "festivals": [
+      "Bhairav Ashtami",
+      "Navratri",
+      "Mahashivratri"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1609766418204-94aae0ecfdfc?w=800",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=800"
+    ],
+    "coordinates": {
+      "lat": 23.1882,
+      "lng": 75.7756
+    },
+    "rating": 4.7,
+    "reviews": 8320,
+    "facilities": [
+      "Parking",
+      "Prasad",
+      "Shoe Stand"
+    ],
+    "nearbyTemples": [
+      "Mahakaleshwar Temple",
+      "Harsiddhi Temple"
+    ],
+    "officialWebsite": ""
+  },
+  {
+    "name": "Harsiddhi Temple",
+    "slug": "harsiddhi-temple",
+    "deity": "Goddess Harsiddhi",
+    "deityColor": "#ec4899",
+    "type": "Shakti Peeth",
+    "address": "Harsiddhi, Ujjain",
+    "district": "Ujjain",
+    "state": "Madhya Pradesh",
+    "description": "Harsiddhi Temple is one of the 51 Shakti Peethas and is dedicated to Goddess Harsiddhi, who is believed to be the patron deity of King Vikramaditya.",
+    "history": "According to legend, Goddess Sati's elbow fell at this spot. The temple has two large lamp pillars known as deepmalas with 1001 lamps lit during Navratri.",
+    "timings": {
+      "morning": "5:00 AM - 12:30 PM",
+      "evening": "4:00 PM - 10:00 PM"
+    },
+    "aartiTimings": {
+      "morningAarti": "5:30 AM",
+      "eveningAarti": "6:30 PM"
+    },
+    "festivals": [
+      "Navratri",
+      "Deepavali",
+      "Sharadotsav"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=800",
+      "https://images.unsplash.com/photo-1548013146-72479768bada?w=800"
+    ],
+    "coordinates": {
+      "lat": 23.1795,
+      "lng": 75.7712
+    },
+    "rating": 4.8,
+    "reviews": 9870,
+    "facilities": [
+      "Parking",
+      "Prasad",
+      "Wheelchair Access"
+    ],
+    "nearbyTemples": [
+      "Mahakaleshwar Temple",
+      "Kal Bhairav Temple"
+    ],
+    "officialWebsite": ""
+  },
+  {
+    "name": "Sandipani Ashram",
+    "slug": "sandipani-ashram",
+    "deity": "Lord Krishna",
+    "deityColor": "#6366f1",
+    "type": "Ashram Temple",
+    "address": "Sandipani Ashram Road, Ujjain",
+    "district": "Ujjain",
+    "state": "Madhya Pradesh",
+    "description": "The Sandipani Ashram is the place where Lord Krishna, Balaram and Sudama received their education from Guru Sandipani.",
+    "history": "One of the most historically significant sites in Ujjain, this ashram is mentioned in the Bhagavata Purana as the gurukul of Lord Krishna.",
+    "timings": {
+      "morning": "6:00 AM - 12:00 PM",
+      "evening": "4:00 PM - 9:00 PM"
+    },
+    "aartiTimings": {
+      "morningAarti": "6:30 AM",
+      "eveningAarti": "6:00 PM"
+    },
+    "festivals": [
+      "Janmashtami",
+      "Guru Purnima"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1577083552431-6e5fd01988ec?w=800",
+      "https://images.unsplash.com/photo-1609766418204-94aae0ecfdfc?w=800"
+    ],
+    "coordinates": {
+      "lat": 23.1743,
+      "lng": 75.7689
+    },
+    "rating": 4.6,
+    "reviews": 5430,
+    "facilities": [
+      "Parking",
+      "Prasad",
+      "Museum"
+    ],
+    "nearbyTemples": [
+      "Mahakaleshwar Temple",
+      "Mangalnath Temple"
+    ],
+    "officialWebsite": ""
+  },
+  {
+    "name": "Mangalnath Temple",
+    "slug": "mangalnath-temple",
+    "deity": "Lord Mangal (Mars)",
+    "deityColor": "#ef4444",
+    "type": "Navagraha Temple",
+    "address": "Mangalnath Road, Ujjain",
+    "district": "Ujjain",
+    "state": "Madhya Pradesh",
+    "description": "Mangalnath Temple is believed to be the birthplace of Mars (Mangal) according to the Matsya Purana. It is a major Navagraha temple.",
+    "history": "Ujjain is considered the birthplace of Mars as per ancient texts. The temple sits on the banks of the Shipra River and is visited by those seeking relief from Mangal dosha.",
+    "timings": {
+      "morning": "5:00 AM - 12:00 PM",
+      "evening": "4:00 PM - 9:30 PM"
+    },
+    "aartiTimings": {
+      "morningAarti": "5:30 AM",
+      "eveningAarti": "6:30 PM"
+    },
+    "festivals": [
+      "Mangal Chaturthi",
+      "Navratri"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=800",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=800"
+    ],
+    "coordinates": {
+      "lat": 23.1654,
+      "lng": 75.7598
+    },
+    "rating": 4.5,
+    "reviews": 4210,
+    "facilities": [
+      "Parking",
+      "Prasad",
+      "Ghat"
+    ],
+    "nearbyTemples": [
+      "Sandipani Ashram",
+      "Triveni Ghat"
+    ],
+    "officialWebsite": ""
+  },
+  {
+    "name": "Khajrana Ganesh Temple",
+    "slug": "khajrana-ganesh-temple",
+    "deity": "Lord Ganesh",
+    "deityColor": "#10b981",
+    "type": "Swayambhu Temple",
+    "address": "Khajrana, Indore",
+    "district": "Indore",
+    "state": "Madhya Pradesh",
+    "description": "Khajrana Ganesh Temple is one of the most famous Ganesh temples in India. The idol is believed to be swayambhu (self-manifested).",
+    "history": "The temple was built by Maharani Ahilyabai Holkar in the 18th century. The idol was hidden underground to protect it from Mughal invaders and later discovered.",
+    "timings": {
+      "morning": "5:00 AM - 12:00 PM",
+      "evening": "3:00 PM - 11:00 PM"
+    },
+    "aartiTimings": {
+      "morningAarti": "5:30 AM",
+      "madhyahnaAarti": "12:00 PM",
+      "eveningAarti": "7:30 PM"
+    },
+    "festivals": [
+      "Ganesh Chaturthi",
+      "Sankashti Chaturthi",
+      "Diwali"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=800",
+      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=800"
+    ],
+    "coordinates": {
+      "lat": 22.6916,
+      "lng": 75.9005
+    },
+    "rating": 4.8,
+    "reviews": 12340,
+    "facilities": [
+      "Parking",
+      "VIP Darshan",
+      "Prasad",
+      "Wheelchair Access",
+      "Locker"
+    ],
+    "nearbyTemples": [
+      "Annapurna Temple",
+      "Bada Ganpati Temple"
+    ],
+    "officialWebsite": ""
+  },
+  {
+    "name": "Annapurna Temple",
+    "slug": "annapurna-temple-indore",
+    "deity": "Goddess Annapurna",
+    "deityColor": "#f59e0b",
+    "type": "Devi Temple",
+    "address": "Annapurna Nagar, Indore",
+    "district": "Indore",
+    "state": "Madhya Pradesh",
+    "description": "The Annapurna Temple is a famous temple dedicated to Goddess Annapurna, the goddess of food and nourishment, located in Indore.",
+    "history": "Built in the 1980s, the temple is known for its unique South Indian style architecture and houses idols of various deities including Annapurna, Kashi Vishwanath and Kal Bhairav.",
+    "timings": {
+      "morning": "5:30 AM - 12:00 PM",
+      "evening": "4:00 PM - 10:00 PM"
+    },
+    "aartiTimings": {
+      "morningAarti": "6:00 AM",
+      "eveningAarti": "7:00 PM"
+    },
+    "festivals": [
+      "Navratri",
+      "Annakut",
+      "Diwali"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1548013146-72479768bada?w=800",
+      "https://images.unsplash.com/photo-1577083552431-6e5fd01988ec?w=800"
+    ],
+    "coordinates": {
+      "lat": 22.7253,
+      "lng": 75.8661
+    },
+    "rating": 4.6,
+    "reviews": 7890,
+    "facilities": [
+      "Parking",
+      "Prasad",
+      "Wheelchair Access"
+    ],
+    "nearbyTemples": [
+      "Khajrana Ganesh Temple",
+      "Bada Ganpati Temple"
+    ],
+    "officialWebsite": ""
+  },
+  {
+    "name": "Bada Ganpati Temple",
+    "slug": "bada-ganpati-temple",
+    "deity": "Lord Ganesh",
+    "deityColor": "#10b981",
+    "type": "Ganesh Temple",
+    "address": "Rajwada, Indore",
+    "district": "Indore",
+    "state": "Madhya Pradesh",
+    "description": "Bada Ganpati Temple houses one of the largest Ganesh idols in the world, measuring 25 feet in height.",
+    "history": "Established in 1875, the temple is one of the oldest and most revered temples in Indore. The massive idol was installed by a local saint.",
+    "timings": {
+      "morning": "5:00 AM - 12:00 PM",
+      "evening": "4:00 PM - 10:00 PM"
+    },
+    "aartiTimings": {
+      "morningAarti": "5:30 AM",
+      "eveningAarti": "7:00 PM"
+    },
+    "festivals": [
+      "Ganesh Chaturthi",
+      "Sankashti Chaturthi"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1609766418204-94aae0ecfdfc?w=800",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=800"
+    ],
+    "coordinates": {
+      "lat": 22.7196,
+      "lng": 75.8577
+    },
+    "rating": 4.7,
+    "reviews": 9120,
+    "facilities": [
+      "Parking",
+      "Prasad"
+    ],
+    "nearbyTemples": [
+      "Annapurna Temple",
+      "Khajrana Ganesh Temple"
+    ],
+    "officialWebsite": ""
+  },
+  {
+    "name": "Birla Mandir (Lakshmi Narayan Temple)",
+    "slug": "birla-mandir-bhopal",
+    "deity": "Lord Vishnu & Goddess Lakshmi",
+    "deityColor": "#f59e0b",
+    "type": "Vishnu Temple",
+    "address": "Arera Hills, Bhopal",
+    "district": "Bhopal",
+    "state": "Madhya Pradesh",
+    "description": "Birla Mandir is a beautiful white marble temple dedicated to Lord Vishnu and Goddess Lakshmi, situated on top of Arera Hills overlooking the Upper Lake.",
+    "history": "Built by the Birla family in 1964, the temple is constructed in a mix of Rajasthani and Orissan architectural styles. The temple houses a museum with artifacts and sculptures.",
+    "timings": {
+      "morning": "6:00 AM - 12:00 PM",
+      "evening": "4:00 PM - 8:00 PM"
+    },
+    "aartiTimings": {
+      "morningAarti": "6:30 AM",
+      "eveningAarti": "7:00 PM"
+    },
+    "festivals": [
+      "Janmashtami",
+      "Ram Navami",
+      "Diwali"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=800",
+      "https://images.unsplash.com/photo-1548013146-72479768bada?w=800"
+    ],
+    "coordinates": {
+      "lat": 23.2234,
+      "lng": 77.4344
+    },
+    "rating": 4.6,
+    "reviews": 8760,
+    "facilities": [
+      "Parking",
+      "Museum",
+      "Wheelchair Access",
+      "Prasad"
+    ],
+    "nearbyTemples": [
+      "Gufa Mandir",
+      "Sankat Mochan Temple"
+    ],
+    "officialWebsite": ""
+  },
+  {
+    "name": "Gufa Mandir",
+    "slug": "gufa-mandir-bhopal",
+    "deity": "Lord Shiva",
+    "deityColor": "#3b82f6",
+    "type": "Cave Temple",
+    "address": "Shyamla Hills, Bhopal",
+    "district": "Bhopal",
+    "state": "Madhya Pradesh",
+    "description": "Gufa Mandir is a unique cave temple dedicated to Lord Shiva, carved inside a natural rock formation on Shyamla Hills.",
+    "history": "The temple is naturally formed inside a cave and has been a site of worship for centuries. It is believed that saints and sages meditated here.",
+    "timings": {
+      "morning": "6:00 AM - 12:00 PM",
+      "evening": "4:00 PM - 9:00 PM"
+    },
+    "aartiTimings": {
+      "morningAarti": "6:30 AM",
+      "eveningAarti": "6:30 PM"
+    },
+    "festivals": [
+      "Mahashivratri",
+      "Shravan Month"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=800",
+      "https://images.unsplash.com/photo-1577083552431-6e5fd01988ec?w=800"
+    ],
+    "coordinates": {
+      "lat": 23.2412,
+      "lng": 77.4198
+    },
+    "rating": 4.5,
+    "reviews": 5430,
+    "facilities": [
+      "Parking",
+      "Prasad"
+    ],
+    "nearbyTemples": [
+      "Birla Mandir",
+      "Sankat Mochan Temple"
+    ],
+    "officialWebsite": ""
+  },
+  {
+    "name": "Sankat Mochan Temple",
+    "slug": "sankat-mochan-bhopal",
+    "deity": "Lord Hanuman",
+    "deityColor": "#f97316",
+    "type": "Hanuman Temple",
+    "address": "Panchsheel Nagar, Bhopal",
+    "district": "Bhopal",
+    "state": "Madhya Pradesh",
+    "description": "Sankat Mochan Temple is dedicated to Lord Hanuman and is one of the most visited temples in Bhopal, believed to remove all sorrows of devotees.",
+    "history": "The temple has been a center of faith for the people of Bhopal for over a century. It is especially crowded on Tuesdays and Saturdays.",
+    "timings": {
+      "morning": "5:30 AM - 12:00 PM",
+      "evening": "4:00 PM - 10:00 PM"
+    },
+    "aartiTimings": {
+      "morningAarti": "6:00 AM",
+      "eveningAarti": "7:30 PM"
+    },
+    "festivals": [
+      "Hanuman Jayanti",
+      "Ram Navami",
+      "Navratri"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=800",
+      "https://images.unsplash.com/photo-1609766418204-94aae0ecfdfc?w=800"
+    ],
+    "coordinates": {
+      "lat": 23.2156,
+      "lng": 77.4432
+    },
+    "rating": 4.7,
+    "reviews": 6780,
+    "facilities": [
+      "Parking",
+      "Prasad",
+      "Wheelchair Access"
+    ],
+    "nearbyTemples": [
+      "Birla Mandir",
+      "Gufa Mandir"
+    ],
+    "officialWebsite": ""
+  },
+  {
+    "name": "Kandariya Mahadev Temple",
+    "slug": "kandariya-mahadev-temple",
+    "deity": "Lord Shiva",
+    "deityColor": "#3b82f6",
+    "type": "UNESCO Heritage Temple",
+    "address": "Western Group, Khajuraho",
+    "district": "Khajuraho",
+    "state": "Madhya Pradesh",
+    "description": "Kandariya Mahadev Temple is the largest and most ornate temple in Khajuraho, dedicated to Lord Shiva. It is a UNESCO World Heritage Site.",
+    "history": "Built by the Chandela dynasty between 1025–1050 AD, this temple represents the pinnacle of Chandela architecture with its intricate erotic carvings and towering shikhara.",
+    "timings": {
+      "morning": "6:00 AM - 6:00 PM",
+      "evening": "6:00 AM - 6:00 PM"
+    },
+    "aartiTimings": {
+      "morningAarti": "6:30 AM",
+      "eveningAarti": "5:30 PM"
+    },
+    "festivals": [
+      "Mahashivratri",
+      "Khajuraho Dance Festival"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1548013146-72479768bada?w=800",
+      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=800"
+    ],
+    "coordinates": {
+      "lat": 24.8518,
+      "lng": 79.9199
+    },
+    "rating": 4.9,
+    "reviews": 18760,
+    "facilities": [
+      "Parking",
+      "Museum",
+      "Guide Service",
+      "Light & Sound Show"
+    ],
+    "nearbyTemples": [
+      "Lakshmana Temple",
+      "Vishwanath Temple",
+      "Devi Jagadamba Temple"
+    ],
+    "officialWebsite": "https://khajuraho.nic.in"
+  },
+  {
+    "name": "Lakshmana Temple",
+    "slug": "lakshmana-temple-khajuraho",
+    "deity": "Lord Vishnu",
+    "deityColor": "#8b5cf6",
+    "type": "UNESCO Heritage Temple",
+    "address": "Western Group, Khajuraho",
+    "district": "Khajuraho",
+    "state": "Madhya Pradesh",
+    "description": "Lakshmana Temple is dedicated to Lord Vishnu and is one of the best preserved temples of the western group of Khajuraho temples.",
+    "history": "Built around 930–950 AD by the Chandela king Yashovarman, this temple is dedicated to Vaikuntha Vishnu and features exquisite carvings on its walls.",
+    "timings": {
+      "morning": "6:00 AM - 6:00 PM",
+      "evening": "6:00 AM - 6:00 PM"
+    },
+    "aartiTimings": {
+      "morningAarti": "6:30 AM",
+      "eveningAarti": "5:30 PM"
+    },
+    "festivals": [
+      "Ram Navami",
+      "Khajuraho Dance Festival"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1577083552431-6e5fd01988ec?w=800",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=800"
+    ],
+    "coordinates": {
+      "lat": 24.8512,
+      "lng": 79.9187
+    },
+    "rating": 4.8,
+    "reviews": 12430,
+    "facilities": [
+      "Parking",
+      "Museum",
+      "Guide Service"
+    ],
+    "nearbyTemples": [
+      "Kandariya Mahadev Temple",
+      "Vishwanath Temple"
+    ],
+    "officialWebsite": "https://khajuraho.nic.in"
+  },
+  {
+    "name": "Devi Jagadamba Temple",
+    "slug": "devi-jagadamba-temple",
+    "deity": "Goddess Jagadamba",
+    "deityColor": "#ec4899",
+    "type": "UNESCO Heritage Temple",
+    "address": "Western Group, Khajuraho",
+    "district": "Khajuraho",
+    "state": "Madhya Pradesh",
+    "description": "Devi Jagadamba Temple is dedicated to Goddess Parvati and is one of the finest examples of Chandela temple architecture in Khajuraho.",
+    "history": "Originally built as a Vishnu temple around 1000–1025 AD, it was later converted to a Goddess temple. It features three bands of sculptures on its exterior walls.",
+    "timings": {
+      "morning": "6:00 AM - 6:00 PM",
+      "evening": "6:00 AM - 6:00 PM"
+    },
+    "aartiTimings": {
+      "morningAarti": "6:30 AM",
+      "eveningAarti": "5:30 PM"
+    },
+    "festivals": [
+      "Navratri",
+      "Khajuraho Dance Festival"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1609766418204-94aae0ecfdfc?w=800",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=800"
+    ],
+    "coordinates": {
+      "lat": 24.8521,
+      "lng": 79.9194
+    },
+    "rating": 4.7,
+    "reviews": 9870,
+    "facilities": [
+      "Parking",
+      "Guide Service",
+      "Light & Sound Show"
+    ],
+    "nearbyTemples": [
+      "Kandariya Mahadev Temple",
+      "Lakshmana Temple"
+    ],
+    "officialWebsite": "https://khajuraho.nic.in"
+  },
+  {
+    "name": "Ram Raja Temple",
+    "slug": "ram-raja-temple",
+    "deity": "Lord Ram",
+    "deityColor": "#f97316",
+    "type": "Royal Palace Temple",
+    "address": "Orchha Town, Orchha",
+    "district": "Orchha",
+    "state": "Madhya Pradesh",
+    "description": "Ram Raja Temple is unique as Lord Ram is worshipped here as a king. It is the only temple in India where Lord Ram is given a royal gun salute.",
+    "history": "Queen Ganesh Kunwari brought the idol of Lord Ram from Ayodhya in the 16th century. When the idol could not be moved from the palace, the palace itself was converted into a temple.",
+    "timings": {
+      "morning": "8:00 AM - 12:30 PM",
+      "evening": "7:30 PM - 10:00 PM"
+    },
+    "aartiTimings": {
+      "morningAarti": "8:00 AM",
+      "eveningAarti": "8:00 PM"
+    },
+    "festivals": [
+      "Ram Navami",
+      "Vivah Panchami",
+      "Diwali"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=800",
+      "https://images.unsplash.com/photo-1548013146-72479768bada?w=800"
+    ],
+    "coordinates": {
+      "lat": 25.3519,
+      "lng": 78.6412
+    },
+    "rating": 4.8,
+    "reviews": 11230,
+    "facilities": [
+      "Parking",
+      "Prasad",
+      "Wheelchair Access"
+    ],
+    "nearbyTemples": [
+      "Chaturbhuj Temple",
+      "Laxminarayan Temple"
+    ],
+    "officialWebsite": ""
+  },
+  {
+    "name": "Chaturbhuj Temple",
+    "slug": "chaturbhuj-temple-orchha",
+    "deity": "Lord Vishnu",
+    "deityColor": "#8b5cf6",
+    "type": "Royal Temple",
+    "address": "Orchha Fort Complex, Orchha",
+    "district": "Orchha",
+    "state": "Madhya Pradesh",
+    "description": "Chaturbhuj Temple is a magnificent temple built to house the idol of Lord Ram that was brought from Ayodhya. It is known for its grand architecture and towering spire.",
+    "history": "Built by Raja Madhukar Shah in the 16th century, the temple was originally meant to house the Ram idol but the idol was placed in the palace instead. The temple stands empty of its intended deity.",
+    "timings": {
+      "morning": "8:00 AM - 12:00 PM",
+      "evening": "5:00 PM - 8:00 PM"
+    },
+    "aartiTimings": {
+      "morningAarti": "8:30 AM",
+      "eveningAarti": "6:00 PM"
+    },
+    "festivals": [
+      "Ram Navami",
+      "Diwali"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=800",
+      "https://images.unsplash.com/photo-1577083552431-6e5fd01988ec?w=800"
+    ],
+    "coordinates": {
+      "lat": 25.3508,
+      "lng": 78.6398
+    },
+    "rating": 4.7,
+    "reviews": 8760,
+    "facilities": [
+      "Parking",
+      "Guide Service"
+    ],
+    "nearbyTemples": [
+      "Ram Raja Temple",
+      "Laxminarayan Temple"
+    ],
+    "officialWebsite": ""
+  },
+  {
+    "name": "Narmada Udgam Temple",
+    "slug": "narmada-udgam-temple",
+    "deity": "Goddess Narmada",
+    "deityColor": "#06b6d4",
+    "type": "River Origin Temple",
+    "address": "Narmada Udgam, Amarkantak",
+    "district": "Amarkantak",
+    "state": "Madhya Pradesh",
+    "description": "Narmada Udgam Temple marks the origin of the holy Narmada River. It is one of the most sacred pilgrimage sites in central India.",
+    "history": "Amarkantak is considered the daughter of Lord Shiva and the holy Narmada River originates from here. Pilgrims perform Narmada Parikrama starting from this sacred spot.",
+    "timings": {
+      "morning": "5:00 AM - 12:00 PM",
+      "evening": "4:00 PM - 9:00 PM"
+    },
+    "aartiTimings": {
+      "morningAarti": "5:30 AM",
+      "eveningAarti": "6:30 PM"
+    },
+    "festivals": [
+      "Narmada Jayanti",
+      "Shivratri",
+      "Kartik Purnima"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1548013146-72479768bada?w=800",
+      "https://images.unsplash.com/photo-1609766418204-94aae0ecfdfc?w=800"
+    ],
+    "coordinates": {
+      "lat": 22.6745,
+      "lng": 81.7561
+    },
+    "rating": 4.8,
+    "reviews": 9870,
+    "facilities": [
+      "Parking",
+      "Ghat",
+      "Prasad",
+      "Dharamshala"
+    ],
+    "nearbyTemples": [
+      "Shri Yantra Mandir",
+      "Kapildhara Waterfall Temple"
+    ],
+    "officialWebsite": ""
+  },
+  {
+    "name": "Shri Yantra Mandir",
+    "slug": "shri-yantra-mandir",
+    "deity": "Goddess Shakti",
+    "deityColor": "#ec4899",
+    "type": "Shakti Temple",
+    "address": "Amarkantak, Anuppur",
+    "district": "Amarkantak",
+    "state": "Madhya Pradesh",
+    "description": "Shri Yantra Mandir is a unique temple built in the shape of the Shri Yantra, a sacred geometric diagram. It is a major spiritual center in Amarkantak.",
+    "history": "Built in the 20th century, this temple is shaped like the Shri Yantra and is considered a powerful spiritual energy center. The temple attracts saints and spiritual seekers.",
+    "timings": {
+      "morning": "6:00 AM - 12:00 PM",
+      "evening": "4:00 PM - 8:00 PM"
+    },
+    "aartiTimings": {
+      "morningAarti": "6:30 AM",
+      "eveningAarti": "6:00 PM"
+    },
+    "festivals": [
+      "Navratri",
+      "Narmada Jayanti"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=800",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=800"
+    ],
+    "coordinates": {
+      "lat": 22.6712,
+      "lng": 81.7534
+    },
+    "rating": 4.6,
+    "reviews": 5430,
+    "facilities": [
+      "Parking",
+      "Meditation Hall",
+      "Prasad"
+    ],
+    "nearbyTemples": [
+      "Narmada Udgam Temple",
+      "Kapildhara Waterfall Temple"
+    ],
+    "officialWebsite": ""
+  },
+  {
+    "name": "Omkareshwar Temple",
+    "slug": "omkareshwar-temple",
+    "deity": "Lord Shiva",
+    "deityColor": "#3b82f6",
+    "type": "Jyotirlinga",
+    "address": "Omkareshwar Island, Khandwa",
+    "district": "Omkareshwar",
+    "state": "Madhya Pradesh",
+    "description": "Omkareshwar is one of the 12 sacred Jyotirlingas dedicated to Lord Shiva, situated on an island shaped like the Hindu symbol OM in the Narmada River.",
+    "history": "The temple dates back several centuries and is mentioned in ancient scriptures. The island naturally forms the shape of the sacred OM symbol when viewed from above.",
+    "timings": {
+      "morning": "5:00 AM - 12:30 PM",
+      "evening": "4:00 PM - 10:00 PM"
+    },
+    "aartiTimings": {
+      "bhasmaAarti": "5:00 AM",
+      "morningAarti": "8:30 AM",
+      "eveningAarti": "8:30 PM"
+    },
+    "festivals": [
+      "Mahashivratri",
+      "Shravan Month",
+      "Kartik Purnima"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1577083552431-6e5fd01988ec?w=800",
+      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=800"
+    ],
+    "coordinates": {
+      "lat": 22.2441,
+      "lng": 76.1512
+    },
+    "rating": 4.9,
+    "reviews": 14320,
+    "facilities": [
+      "Parking",
+      "Boat Service",
+      "VIP Darshan",
+      "Prasad",
+      "Dharamshala"
+    ],
+    "nearbyTemples": [
+      "Mamleshwar Temple",
+      "Siddhanath Temple"
+    ],
+    "officialWebsite": "https://omkareshwar.nic.in"
+  },
+  {
+    "name": "Mamleshwar Temple",
+    "slug": "mamleshwar-temple",
+    "deity": "Lord Shiva",
+    "deityColor": "#3b82f6",
+    "type": "Jyotirlinga",
+    "address": "Omkareshwar, Khandwa",
+    "district": "Omkareshwar",
+    "state": "Madhya Pradesh",
+    "description": "Mamleshwar Temple is considered one part of the Omkareshwar Jyotirlinga, situated on the south bank of the Narmada River opposite the main island.",
+    "history": "Some scholars consider Mamleshwar to be the true Jyotirlinga of Omkareshwar. The temple is equally sacred and visited by pilgrims alongside the main Omkareshwar temple.",
+    "timings": {
+      "morning": "5:00 AM - 12:00 PM",
+      "evening": "4:00 PM - 9:30 PM"
+    },
+    "aartiTimings": {
+      "morningAarti": "5:30 AM",
+      "eveningAarti": "7:00 PM"
+    },
+    "festivals": [
+      "Mahashivratri",
+      "Shravan Month"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1609766418204-94aae0ecfdfc?w=800",
+      "https://images.unsplash.com/photo-1548013146-72479768bada?w=800"
+    ],
+    "coordinates": {
+      "lat": 22.2398,
+      "lng": 76.1487
+    },
+    "rating": 4.7,
+    "reviews": 8970,
+    "facilities": [
+      "Parking",
+      "Prasad",
+      "Ghat"
+    ],
+    "nearbyTemples": [
+      "Omkareshwar Temple",
+      "Siddhanath Temple"
+    ],
+    "officialWebsite": ""
+  },
+  {
+    "name": "Kamadgiri Temple",
+    "slug": "kamadgiri-temple",
+    "deity": "Lord Ram",
+    "deityColor": "#f97316",
+    "type": "Parikrama Temple",
+    "address": "Kamadgiri, Chitrakoot",
+    "district": "Chitrakoot",
+    "state": "Madhya Pradesh",
+    "description": "Kamadgiri is the most sacred hill in Chitrakoot where Lord Ram, Sita and Lakshman spent most of their exile period. Devotees perform a 5km parikrama around the hill.",
+    "history": "Lord Ram is believed to have lived at Chitrakoot for 11.5 years during his 14-year exile. The forest and hills here are considered highly sacred in Hindu tradition.",
+    "timings": {
+      "morning": "5:00 AM - 12:00 PM",
+      "evening": "4:00 PM - 9:00 PM"
+    },
+    "aartiTimings": {
+      "morningAarti": "5:30 AM",
+      "eveningAarti": "7:00 PM"
+    },
+    "festivals": [
+      "Ram Navami",
+      "Diwali",
+      "Vivah Panchami"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=800",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=800"
+    ],
+    "coordinates": {
+      "lat": 24.8731,
+      "lng": 80.8945
+    },
+    "rating": 4.8,
+    "reviews": 10230,
+    "facilities": [
+      "Parking",
+      "Prasad",
+      "Parikrama Path",
+      "Dharamshala"
+    ],
+    "nearbyTemples": [
+      "Ramghat",
+      "Sati Anusuiya Temple"
+    ],
+    "officialWebsite": ""
+  },
+  {
+    "name": "Ramghat Temple",
+    "slug": "ramghat-temple",
+    "deity": "Lord Ram",
+    "deityColor": "#f97316",
+    "type": "Ghat Temple",
+    "address": "Ramghat, Chitrakoot",
+    "district": "Chitrakoot",
+    "state": "Madhya Pradesh",
+    "description": "Ramghat is the most sacred ghat in Chitrakoot on the banks of the Mandakini River where Lord Ram used to bathe during his exile.",
+    "history": "The ghat is famous for the evening aarti ceremony on the Mandakini River which resembles the Ganga aarti at Varanasi. Saints Tulsidas and Kabir Das met here.",
+    "timings": {
+      "morning": "5:00 AM - 12:00 PM",
+      "evening": "4:00 PM - 9:00 PM"
+    },
+    "aartiTimings": {
+      "morningAarti": "5:30 AM",
+      "eveningAarti": "7:30 PM"
+    },
+    "festivals": [
+      "Ram Navami",
+      "Kartik Purnima",
+      "Diwali"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=800",
+      "https://images.unsplash.com/photo-1577083552431-6e5fd01988ec?w=800"
+    ],
+    "coordinates": {
+      "lat": 24.8756,
+      "lng": 80.8967
+    },
+    "rating": 4.7,
+    "reviews": 8760,
+    "facilities": [
+      "Ghat",
+      "Boat Service",
+      "Prasad"
+    ],
+    "nearbyTemples": [
+      "Kamadgiri Temple",
+      "Sati Anusuiya Temple"
+    ],
+    "officialWebsite": ""
+  },
+  {
+    "name": "Maa Sharda Temple",
+    "slug": "maa-sharda-temple",
+    "deity": "Goddess Sharda",
+    "deityColor": "#ec4899",
+    "type": "Shakti Peeth",
+    "address": "Trikuta Hill, Maihar",
+    "district": "Maihar",
+    "state": "Madhya Pradesh",
+    "description": "Maa Sharda Temple is situated atop the Trikuta Hill at an altitude of 600 feet and is one of the most famous Shakti Peethas in central India.",
+    "history": "The temple is believed to be over 1000 years old. Legend says that the legendary musician Alha of the Alha-Udal folk epic was a great devotee of Maa Sharda and worshipped her here.",
+    "timings": {
+      "morning": "5:00 AM - 12:00 PM",
+      "evening": "3:00 PM - 9:00 PM"
+    },
+    "aartiTimings": {
+      "morningAarti": "5:30 AM",
+      "eveningAarti": "7:00 PM"
+    },
+    "festivals": [
+      "Navratri",
+      "Sharadotsav",
+      "Diwali"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1548013146-72479768bada?w=800",
+      "https://images.unsplash.com/photo-1609766418204-94aae0ecfdfc?w=800"
+    ],
+    "coordinates": {
+      "lat": 24.2612,
+      "lng": 80.7723
+    },
+    "rating": 4.8,
+    "reviews": 11430,
+    "facilities": [
+      "Parking",
+      "Ropeway",
+      "Stairs",
+      "Prasad",
+      "Dharamshala"
+    ],
+    "nearbyTemples": [
+      "Kamadgiri Temple",
+      "Ramghat Temple"
+    ],
+    "officialWebsite": ""
+  },
+  {
+    "name": "Maa Pitambara Peeth",
+    "slug": "pitambara-peeth",
+    "deity": "Goddess Pitambara (Baglamukhi)",
+    "deityColor": "#eab308",
+    "type": "Shakti Peeth",
+    "address": "Datia Town, Datia",
+    "district": "Datia",
+    "state": "Madhya Pradesh",
+    "description": "Maa Pitambara Peeth is one of the most powerful Shakti temples in India dedicated to Goddess Baglamukhi. It is visited by millions including politicians and dignitaries.",
+    "history": "The temple was established by Swami Swaroopanand in the 20th century. Goddess Baglamukhi is one of the ten Mahavidyas and is believed to grant victory over enemies.",
+    "timings": {
+      "morning": "5:00 AM - 12:00 PM",
+      "evening": "4:00 PM - 10:00 PM"
+    },
+    "aartiTimings": {
+      "morningAarti": "5:30 AM",
+      "eveningAarti": "7:30 PM"
+    },
+    "festivals": [
+      "Navratri",
+      "Baglamukhi Jayanti"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=800",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=800"
+    ],
+    "coordinates": {
+      "lat": 25.6712,
+      "lng": 78.4589
+    },
+    "rating": 4.9,
+    "reviews": 13450,
+    "facilities": [
+      "Parking",
+      "VIP Darshan",
+      "Prasad",
+      "Dharamshala",
+      "Havan Kund"
+    ],
+    "nearbyTemples": [
+      "Sonagiri Temple",
+      "Unao Balaji Temple"
+    ],
+    "officialWebsite": ""
+  },
+  {
+    "name": "Sanchi Stupa & Chaitya Temple",
+    "slug": "sanchi-stupa-temple",
+    "deity": "Lord Buddha",
+    "deityColor": "#f59e0b",
+    "type": "Buddhist Temple",
+    "address": "Sanchi Hill, Sanchi",
+    "district": "Sanchi",
+    "state": "Madhya Pradesh",
+    "description": "The Sanchi Stupa is one of the oldest stone structures in India and a UNESCO World Heritage Site. It houses the relics of Lord Buddha.",
+    "history": "Built by Emperor Ashoka in the 3rd century BC, the Great Stupa of Sanchi is one of the best preserved ancient stupas in India. It was rediscovered in 1818 by British officer General Taylor.",
+    "timings": {
+      "morning": "6:00 AM - 6:00 PM",
+      "evening": "6:00 AM - 6:00 PM"
+    },
+    "aartiTimings": {
+      "morningPrayer": "6:30 AM",
+      "eveningPrayer": "5:30 PM"
+    },
+    "festivals": [
+      "Buddha Purnima",
+      "Ashoka Jayanti"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=800",
+      "https://images.unsplash.com/photo-1577083552431-6e5fd01988ec?w=800"
+    ],
+    "coordinates": {
+      "lat": 23.4793,
+      "lng": 77.7395
+    },
+    "rating": 4.9,
+    "reviews": 16780,
+    "facilities": [
+      "Parking",
+      "Museum",
+      "Guide Service",
+      "Cafeteria"
+    ],
+    "nearbyTemples": [
+      "Udayagiri Caves",
+      "Vidisha Heliodorus Pillar"
+    ],
+    "officialWebsite": "https://sanchi.nic.in"
+  }
+];
+
+module.exports = temples;

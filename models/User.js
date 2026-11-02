@@ -26,6 +26,25 @@ const UserSchema = new mongoose.Schema({
     type:    String,
     default: "",
   },
+  // ── Profile details (PUT /api/auth/profile) ──
+  phone: {
+    type:    String,
+    trim:    true,
+    default: "",
+    match:   [/^$|^[+\d][\d\s-]{9,15}$/, "Please enter a valid phone number"],
+  },
+  city: {
+    type:      String,
+    trim:      true,
+    default:   "",
+    maxlength: [100, "City cannot exceed 100 characters"],
+  },
+  bio: {
+    type:      String,
+    trim:      true,
+    default:   "",
+    maxlength: [500, "Bio cannot exceed 500 characters"],
+  },
   role: {
     type:    String,
     enum:    ["user", "admin"],
@@ -44,8 +63,9 @@ const UserSchema = new mongoose.Schema({
     type:    Boolean,
     default: false,
   },
-  resetPasswordToken:  String,
-  resetPasswordExpire: Date,
+  // select:false — hashed reset token profile response me kabhi na jaaye
+  resetPasswordToken:  { type: String, select: false },
+  resetPasswordExpire: { type: Date,   select: false },
 }, { timestamps: true });
 
 // ── Hooks & Methods BEFORE module.exports ──
