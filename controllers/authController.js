@@ -1,5 +1,7 @@
-const User = require("../models/User");
-const bcrypt =require("bcryptjs");
+const User           = require("../models/User");
+const GosevaPledge   = require("../models/GosevaPledge");
+const ContactMessage = require("../models/ContactMessage");
+const crypto         = require("crypto");
 
 // ── Token response helper ──
 const sendToken = (user, statusCode, res) => {
@@ -83,7 +85,6 @@ exports.getProfile = async (req, res, next) => {
 
 // Password Forgot
  
- const crypto       = require("crypto");
 // const User         = require("../models/User");
 const sendEmail    = require("../utils/sendEmail");
 
@@ -235,15 +236,87 @@ exports.resetPassword = async (req, res, next) => {
 
 
 // ── Update Profile ──
+// Allowed: name, language, phone, city, bio.
+// Sirf wahi fields update hoti hain jo request me aayi hon (undefined ignore).
+// Empty string phone/city/bio = clear karna.
 exports.updateProfile = async (req, res, next) => {
   try {
-    const { name, language } = req.body;
+    const ALLOWED = ["name", "language", "phone", "city", "bio"];
+    const updates = {};
+    for (const key of ALLOWED) {
+      if (req.body[key] !== undefined) updates[key] = req.body[key];
+    }
+
     const user = await User.findByIdAndUpdate(
       req.user.id,
-      { name, language },
+      { $set: updates },
       { new: true, runValidators: true }
     );
+
+    if (!user) {
+      return res.status(404).json({ success: false, message: "User not found" });
+    }
+
     res.status(200).json({ success: true, user });
+  } catch (error) {
+    next(error);
+  }
+};
+
+// ── Change Password ── (protected)
+// NOTE: galat current password par 400 bhejte hain, 401 nahi — frontend ka
+// axios interceptor 401 par user ko logout kar deta hai.
+exports.changePassword = async (req, res, next) => {
+  try {
+    const { currentPassword, newPassword } = req.body;
+
+    const user = await User.findById(req.user.id).select("+password");
+    if (!user) {
+      return res.status(404).json({ success: false, message: "User not found" });
+    }
+
+    const isMatch = await user.matchPassword(currentPassword);
+    if (!isMatch) {
+      return res.status(400).json({
+        success: false,
+        message: "Current password is incorrect",
+      });
+    }
+
+    // pre-save hook password ko hash karega
+    user.password = newPassword;
+    await user.save();
+
+    res.status(200).json({
+      success: true,
+      message: "Password updated successfully",
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
+// ── Delete Account ── (protected)
+// User hata do. Uske Goseva pledges aur contact messages record ke liye
+// rehte hain, bas user link null ho jaata hai.
+exports.deleteAccount = async (req, res, next) => {
+  try {
+    const userId = req.user.id;
+
+    const deleted = await User.findByIdAndDelete(userId);
+    if (!deleted) {
+      return res.status(404).json({ success: false, message: "User not found" });
+    }
+
+    await Promise.all([
+      GosevaPledge.updateMany({ user: userId }, { $set: { user: null } }),
+      ContactMessage.updateMany({ user: userId }, { $set: { user: null } }),
+    ]);
+
+    res.status(200).json({
+      success: true,
+      message: "Account deleted successfully",
+    });
   } catch (error) {
     next(error);
   }

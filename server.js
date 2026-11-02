@@ -15,6 +15,8 @@ const festivalRoutes = require("./routes/festivalRoutes");
 const blogRoutes     = require("./routes/blogRoutes");
 const reviewRoutes   = require("./routes/reviewRoutes");
 const gosevaRoutes   = require("./routes/gosevaRoutes");
+const contactRoutes    = require("./routes/contactRoutes");
+const newsletterRoutes = require("./routes/newsletterRoutes");
 
 connectDB();
 
@@ -49,6 +51,8 @@ app.use("/api/districts", districtRoutes);
 app.use("/api/festivals", festivalRoutes);
 app.use("/api/blogs",     blogRoutes);
 app.use("/api/goseva",    gosevaRoutes);
+app.use("/api/contact",    contactRoutes);
+app.use("/api/newsletter", newsletterRoutes);
 
 // ── Nested review route: /api/temples/:templeId/reviews ──
 app.use("/api/temples/:templeId/reviews", reviewRoutes);
@@ -67,6 +71,10 @@ app.get("/api/health", (req, res) => {
       "POST   /api/auth/reset-password/:token",
       "GET    /api/auth/profile",
       "PUT    /api/auth/profile",
+      "PUT    /api/auth/change-password",
+      "DELETE /api/auth/account",
+      "POST   /api/contact",
+      "POST   /api/newsletter",
       "GET    /api/temples",
       "GET    /api/temples/search?q=",
       "GET    /api/temples/:slug",
