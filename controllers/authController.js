@@ -20,13 +20,16 @@ const sendToken = (user, statusCode, res) => {
 };
 
 // ── Register ──
+// Validation (name/email/password) routes/authRoutes me express-validator se ho chuka hai.
 exports.register = async (req, res, next) => {
   try {
-    const { name, email, password } = req.body;
+    const name     = req.body.name.trim();
+    const email    = req.body.email.trim().toLowerCase();
+    const password = req.body.password;
 
     const existing = await User.findOne({ email });
     if (existing) {
-      return res.status(400).json({
+      return res.status(409).json({
         success: false,
         message: "Email already registered",
       });
@@ -35,6 +38,10 @@ exports.register = async (req, res, next) => {
     const user = await User.create({ name, email, password });
     sendToken(user, 201, res);
   } catch (error) {
+    // Race condition: do register ek saath aaye, unique index ne pakda
+    if (error.code === 11000) {
+      return res.status(409).json({ success: false, message: "Email already registered" });
+    }
     next(error);
   }
 };
@@ -42,15 +49,8 @@ exports.register = async (req, res, next) => {
 // ── Login ──
 exports.login = async (req, res, next) => {
   try {
-    const { email, password } = req.body;
-
-    if (!email || !password) {
-      return res.status(400).json({
-        success: false,
-        message: "Please provide email and password",
-      });
-    }
-
+    const email    = req.body.email.trim().toLowerCase();
+    const password = req.body.password;
 
     const user = await User.findOne({ email }).select("+password");
     if (!user) {
@@ -73,6 +73,7 @@ exports.login = async (req, res, next) => {
     next(error);
   }
 };
+
 // ── Get Profile ──
 exports.getProfile = async (req, res, next) => {
   try {
@@ -87,11 +88,12 @@ exports.getProfile = async (req, res, next) => {
  
 // const User         = require("../models/User");
 const sendEmail    = require("../utils/sendEmail");
+const { getFrontendUrl } = require("../utils/config");
 
 // ── Forgot Password ──
 exports.forgotPassword = async (req, res, next) => {
   try {
-    const { email } = req.body;
+    const email = String(req.body.email || "").trim().toLowerCase();
 
     if (!email) {
       return res.status(400).json({
@@ -121,7 +123,7 @@ exports.forgotPassword = async (req, res, next) => {
     await user.save({ validateBeforeSave: false });
 
     // ── Reset URL banao ──
-    const resetUrl = `${process.env.CLIENT_URL}/auth/reset-password/${resetToken}`;
+    const resetUrl = `${getFrontendUrl()}/auth/reset-password/${resetToken}`;
 
     // ── Email bhejo ──
     const html = `
@@ -235,6 +237,7 @@ exports.resetPassword = async (req, res, next) => {
 
 
 
+
 // ── Update Profile ──
 // Allowed: name, language, phone, city, bio.
 // Sirf wahi fields update hoti hain jo request me aayi hon (undefined ignore).
@@ -330,7 +333,7 @@ exports.logout = (req, res) => {
 // ── Check Email ── (signup form: email pehle se registered hai ya nahi)
 exports.checkEmail = async (req, res, next) => {
   try {
-    const { email } = req.body;
+    const email = String(req.body.email || "").trim().toLowerCase();
 
     if (!email) {
       return res.status(400).json({
