@@ -66,7 +66,20 @@ const UserSchema = new mongoose.Schema({
   // select:false — hashed reset token profile response me kabhi na jaaye
   resetPasswordToken:  { type: String, select: false },
   resetPasswordExpire: { type: Date,   select: false },
-}, { timestamps: true });
+}, {
+  timestamps: true,
+  // Defense in depth: JSON/response me password ya reset token kabhi na jaaye,
+  // chahe query me select:false override ho jaaye.
+  toJSON: {
+    transform: (doc, ret) => {
+      delete ret.password;
+      delete ret.resetPasswordToken;
+      delete ret.resetPasswordExpire;
+      delete ret.__v;
+      return ret;
+    },
+  },
+});
 
 // ── Hooks & Methods BEFORE module.exports ──
 
@@ -79,7 +92,7 @@ UserSchema.methods.getJwtToken = function () {
   return jwt.sign(
     { id: this._id, role: this.role, email: this.email },
     process.env.JWT_SECRET,
-    { expiresIn: process.env.JWT_EXPIRE }
+    { expiresIn: process.env.JWT_EXPIRE || "7d" }
   );
 };
 

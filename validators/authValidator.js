@@ -1,5 +1,37 @@
 const { body } = require("express-validator");
 
+const emailRule = () =>
+  body("email")
+    .exists({ values: "falsy" }).withMessage("Email is required").bail()
+    .isString().withMessage("Email must be text").bail()
+    .trim()
+    .isEmail().withMessage("Please enter a valid email")
+    .isLength({ max: 254 }).withMessage("Email is too long")
+    .normalizeEmail({ gmail_remove_dots: false });
+
+const passwordRule = (field = "password") =>
+  body(field)
+    .exists({ values: "falsy" }).withMessage("Password is required").bail()
+    .isString().withMessage("Password must be text").bail()
+    .isLength({ min: 6, max: 72 }).withMessage("Password must be 6–72 characters")
+    // bcrypt sirf pehle 72 bytes use karta hai
+    .custom((v) => Buffer.byteLength(v, "utf8") <= 72)
+    .withMessage("Password is too long");
+
+// POST /api/auth/register
+exports.registerRules = [
+  body("name")
+    .exists({ values: "falsy" }).withMessage("Name is required").bail()
+    .isString().withMessage("Name must be text").bail()
+    .trim()
+    .isLength({ min: 1, max: 50 }).withMessage("Name must be 1–50 characters"),
+  emailRule(),
+  passwordRule(),
+];
+
+// POST /api/auth/login
+exports.loginRules = [emailRule(), passwordRule()];
+
 const PHONE_RX = /^[+\d][\d\s-]{9,15}$/;
 
 // PUT /api/auth/profile — sab fields optional; jo bheji jaayein sirf wahi update hoti hain.
